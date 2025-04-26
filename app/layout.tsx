@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto} from "next/font/google";
 import "./globals.css";
 import NavBar from "./Navbar";
 import AuthProvider from "./auth/Provider";
+// import GoogleAnalyticsScript from "@/GoogleAnalyticsScript";
+// import localFont from "next/font/local"
+
+// const poppins = localFont({
+//   src: "../public/fonts/poppins-regular-webfont.wolf2",
+//   variable: "--font--poppins"
+// })
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +20,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "500"]
+})
 
 export const metadata: Metadata = {
   title: "Nextjs tutorial",
